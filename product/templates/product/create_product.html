@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание товара</title>
+</head>
+<body>
+    <h1>Добавление товаров</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ images_formset.management_form }}
+        {%  for image_form in images_formset %}
+            {{image_form}}
+        {% endfor %}
+        <input type="file" name="product-image" accept="image/*">
+        <input type="file" name="product-image" accept="image/*">
+        <button type="submit">Создать</button>
+    </form>
+</body>
+</html>

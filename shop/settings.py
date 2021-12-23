@@ -145,6 +145,10 @@ AUTH_USER_MODEL = 'account.User'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_USE_TLC = True
+EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'bermetibr@gmail.com'
-EMAIL_HOST_PASSWORD = 'btzgxtabjnzkncxe'
+EMAIL_HOST_PASSWORD = 'ljkykipzosmnvxdo'
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'products-list'
+LOGOUT_URL = 'logout'

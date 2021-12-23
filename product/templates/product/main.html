@@ -1,19 +1,9 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Listing</title>
-    <link rel="stylesheet" href="{% static 'css/reset.css'  %}"  >
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" >
-</head>
-<body>
+{% extends 'base.html'   %}
+
+{%  block body %}
 <div class="main">
     <div class="products-main">
-
         {% for product in products  %}
-
-
         <div class="product-card">
             <img  src="{{ product.images.first.image.url }}" alt="Product-photo" class="product-img">
             <h5>{{ product.name }}</h5>
@@ -30,20 +20,12 @@
             </button class="page-btn"  >
             </a>
             {% endif  %}
-
-
             <button>
                 Next
             </button>
-
         </div>
-
-
     </div>
-
 </div>
-
-</body>
-</html>
+{%  endblock  %}
 
 

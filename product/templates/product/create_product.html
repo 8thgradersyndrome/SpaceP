@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Создание товара</title>
-</head>
-<body>
+{% extends 'base.html'   %}
+{% block title   %}Создание товара{% endblock  %}
+
+{%  block body %}
     <h1>Добавление товаров</h1>
     <form method="post">
         {% csrf_token %}
@@ -17,5 +14,4 @@
         <input type="file" name="product-image" accept="image/*">
         <button type="submit">Создать</button>
     </form>
-</body>
-</html>
+{%  endblock  %}
